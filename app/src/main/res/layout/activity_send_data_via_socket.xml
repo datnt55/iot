@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="vmio.com.blemultipleconnect.activity.SendDataViaSocketActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:title="Scan sensors"
+        app:titleTextColor="#ffffff"
+        android:elevation="5dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:theme="@style/GalaxyZooThemeToolbarDarkOverflow"/>
+    <LinearLayout
+        android:id="@+id/layout_ip"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/toolbar"
+        android:background="#10000000"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="IP Adress" />
+
+        <TextView
+            android:id="@+id/txtMyIp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/txtPcIP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/layout_search_ip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_ip">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_ip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/colorPrimary"
+        android:textColor="#fff"
+        android:onClick="searchIpListener"
+        android:layout_alignParentBottom="true"
+        android:text="Search" />
+    </RelativeLayout>
+    <include
+        layout="@layout/layout_send_data_socket"
+        android:visibility="gone"/>
+</RelativeLayout>
+

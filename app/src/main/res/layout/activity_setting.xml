@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="vmio.com.blemultipleconnect.activity.SettingActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:title="Scan sensors"
+        app:titleTextColor="#ffffff"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:theme="@style/GalaxyZooThemeToolbarDarkOverflow"/>
+    <LinearLayout
+        android:id="@+id/layout_switch_gps"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_height="wrap_content">
+        <Switch
+            android:id="@+id/switch_gps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="GPS無しで使用する"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/dark"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/layout_switch_gps"
+        android:background="#559b9b9b"/>
+    <TextView
+        android:id="@+id/txt_instruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_switch_gps"
+        android:textColor="@color/dark"
+        android:padding="10dp"
+        android:text="@string/setting_attention" />
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/txt_instruction"
+        android:background="@drawable/ab_gradient_bottom"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_device"
+        android:layout_below="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_scan"/>
+
+    <FrameLayout
+        android:id="@+id/btn_scan"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:layout_margin="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:id="@+id/txt_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Scaning..."
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#ffffff" />
+
+            <ImageView
+                android:id="@+id/img_rescan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                app:srcCompat="@drawable/ic_autorenew_black_24dp" />
+        </RelativeLayout>
+
+    </FrameLayout>
+</RelativeLayout>

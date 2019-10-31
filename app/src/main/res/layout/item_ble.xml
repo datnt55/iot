@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:layout_marginBottom="5dp"
+    android:background="#ffffff"
+    tools:context="vmio.com.blemultipleconnect.activity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="50dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:text="TextView"
+                android:textColor="#000000" />
+            <ImageView
+                android:id="@+id/img_gps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                app:srcCompat="@drawable/ic_no_location"/>
+            <ImageView
+                android:id="@+id/img_battery_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                app:srcCompat="@drawable/ic_strong_battery" />
+
+            <ImageView
+                android:id="@+id/img_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:tint="@color/colorAccent"
+                app:srcCompat="@drawable/ic_wifi_black_24dp" />
+            <ImageView
+                android:id="@+id/img_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="10dp"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_videocam_black_24dp" />
+            <ImageView
+                android:id="@+id/img_signal"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_gravity="right"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/signal_strong" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+        <TextView
+            android:id="@+id/txt_battery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:text="TextView" />
+        <TextView
+            android:id="@+id/txt_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:text="" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btn_warning"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:padding="5dp"
+        app:srcCompat="@drawable/ic_warning_black_24dp" />
+</RelativeLayout>

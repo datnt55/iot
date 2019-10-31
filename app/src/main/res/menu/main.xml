@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_setting_body"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_accessibility_black_24dp"
+        android:title="Scanning..."/>
+
+    <item
+        android:id="@+id/action_setting"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_settings_black_24dp"
+        android:title="Scanning..."/>
+    <item
+        android:id="@+id/action_logout"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_exit_to_app"
+        android:title="Log out"/>
+</menu>

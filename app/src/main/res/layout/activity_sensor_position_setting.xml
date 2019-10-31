@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/ly_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/human"/>
+
+    <Button
+        android:id="@+id/btn_close"
+        style="@style/btn_position"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/ic_action_cancel"
+        android:backgroundTint="@color/red"/>
+
+    <Button
+        android:id="@+id/btn_pos_0"
+        style="@style/btn_position"/>
+
+    <Button
+        android:id="@+id/btn_pos_1"
+        style="@style/btn_position"/>
+
+    <Button
+        android:id="@+id/btn_pos_2"
+        style="@style/btn_position"/>
+
+    <Button
+        android:id="@+id/btn_pos_3"
+        style="@style/btn_position"/>
+
+    <Button
+        android:id="@+id/btn_pos_4"
+        style="@style/btn_position"/>
+
+    <Button
+        android:id="@+id/btn_pos_5"
+        style="@style/btn_position"/>
+
+    <Button
+        android:id="@+id/btn_pos_6"
+        style="@style/btn_position"/>
+</RelativeLayout>

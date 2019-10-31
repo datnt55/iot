@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f0f0f0"
+    tools:context="vmio.com.blemultipleconnect.activity.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:title="Scan sensors"
+        app:titleTextColor="#ffffff"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:theme="@style/GalaxyZooThemeToolbarDarkOverflow"/>
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:textColor="@color/dark_gray"
+        android:textStyle="bold"
+        android:paddingLeft="10dp"
+        android:textSize="18sp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/white"
+        android:elevation="2dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/toolbar"
+        android:text="TextView" />
+    <Button
+        android:id="@+id/buttonSaveSD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickSaveSDListener"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:background="#07bf59"
+        android:layout_below="@+id/toolbar"
+        android:visibility="gone"
+        android:layout_margin="5dp"
+        android:text="Export to SD card"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list_ble"
+        android:layout_below="@+id/txt_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+    </android.support.v7.widget.RecyclerView>
+
+   <vmio.com.blemultipleconnect.widget.BottomNavigation
+       android:id="@+id/bottom"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@color/white"
+       android:layout_alignParentBottom="true">
+   </vmio.com.blemultipleconnect.widget.BottomNavigation>
+
+</RelativeLayout>

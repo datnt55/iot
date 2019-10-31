@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Data Logger</string>
+    <string-array name="device_filter"><!--<item>SensorTag</item><item>SensorTag2</item><item>CC2650 SensorTag</item><item>GL7706711518</item>--></string-array>
+    <string name="calibrate_attention">1. センサーデバイスCC2650を平面上に置いてください。 \n2.黄緑色のセンサー指示値が円の中心にくるように調整してください。 \n3. 保存ボタンをタップしてください</string>
+    <string name="setting_attention">1. 全デバイスの電源を入れ、本スマートフォンの近くに置いてください。\n2. センサーデバイスCC2650の較正をしてください。\n3. 装着位置を選択してください。</string>
+    <string name="action_log_in" translatable="false">ログイン</string>
+    <string name="prompt_username" translatable="false">ユーザーID</string>
+    <string name="prompt_password" translatable="false">パスワード</string>
+    <string name="error_field_required" translatable="false">This field is required</string>
+    <string name="gopro_title">ロギング開始手順</string>
+    <string name="gopro_step1">① GoProの動画録画を開始</string>
+    <string name="gopro_step2">② GoProとスマホ背面カメラを密着</string>
+    <string name="gopro_step3">③ 密着状態で5秒待機</string>
+    <string name="gopro_step4">④ 密着状態で「Start」ボタンをタップ</string>
+    <string name="gopro_step5">⑤ ビープ音終了後、密着状態で5秒待機</string>
+    <string name="gopro_step6">⑥ GoProとスマホを離し、作業開始</string>
+    <string name="latitude">緯度:</string>
+    <string name="longitude">経度:</string>
+    <string name="accuracy">GPS精度:</string>
+</resources>
